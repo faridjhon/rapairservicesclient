@@ -1,4 +1,6 @@
 import React from 'react';
+import Blog from '../Blog/Blog';
+import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import Slider from '../Slider/Slider';
 
@@ -7,6 +9,8 @@ const Header = () => {
         <div >
            <Navbar></Navbar>
            <Slider></Slider> 
+           <Blog></Blog>
+           <Footer></Footer>
         </div>
     );
 };
