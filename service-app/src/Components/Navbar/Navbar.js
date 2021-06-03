@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import About from '../About/About';
+
 
 const Navbar = () => {
     return (
@@ -15,7 +18,7 @@ const Navbar = () => {
                     <a class="nav-link mr-5" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link mr-5" href="#">About </a>
+                    <a class="nav-link mr-5" href="/About">About </a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link mr-5" href="#">Services</a>
@@ -29,6 +32,10 @@ const Navbar = () => {
                 <li class="nav-item ">
                     <a class="nav-link mr-5" href="#">Contact Us </a>
                 </li>
+                <li class="nav-item ">
+                    <Link to="/Login">Login</Link>
+                </li>
+                
                 
                 
                 
