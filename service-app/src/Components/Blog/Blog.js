@@ -6,13 +6,14 @@ const Blog = () => {
     return (
         
         <div>
-            <h1 className="text-center mt-5">OUR BLOG</h1>
+            <h5 className="text-center mt-5">OUR BLOG</h5>
+            <p className="text-center">=========</p>
             <div className="row mt-5 align-middle ml-5 mr-5">
             
                 <div className="col-md-6 border border-secondary border-top-0">
                     
                     <img src={images1} alt="" class="img-fluid"/>
-                    <h2>The Heading</h2>
+                    <h5>The Heading</h5>
                     <p>2 January 2017</p>
                     <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -33,7 +34,7 @@ const Blog = () => {
                 </div>
                 <div className="col-md-6 border border-secondary border-top-0">
                     <img src={images2} alt="" class="img-fluid"/>
-                    <h2>The Heading</h2>
+                    <h5>The Heading</h5>
                     <p>2 January 2017</p>
                     <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 

@@ -1,9 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import About from '../About/About';
+import Login from '../Login/Login';
+// import React, { useContext, useEffect, useState } from "react";
+import { userContext } from "../../App";
+
+
 
 
 const Navbar = () => {
+
+    const [loggedInUser] = useContext(userContext);
     return (
              <div class="sticky-top " >
             <nav class="navbar navbar-expand-lg navbar-dark bg-secondary ">
@@ -19,6 +26,7 @@ const Navbar = () => {
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link mr-5" href="/About">About </a>
+                    
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link mr-5" href="#">Services</a>
@@ -32,16 +40,24 @@ const Navbar = () => {
                 <li class="nav-item ">
                     <a class="nav-link mr-5" href="#">Contact Us </a>
                 </li>
-                <li class="nav-item ">
-                    <Link to="/Login">Login</Link>
-                </li>
-                
-                
-                
-                
+                 {/* <li className="nav-item">
+                        {loggedInUser.name ? (
+                        <Link to="/Login" className="nav-link ms-5">
+                            {loggedInUser.name}
+                        </Link>
+                        ) : (
+                        <Link to="/Login" className="nav-link ms-5">
+                            Login
+                        </Link>
+                        )}
+                    </li>               */}
                 </ul>
+                <div>
+                <NavLink to='/login'><Login></Login></NavLink>
+            </div>
                 
             </div>
+            
             </nav>
         </div>
     );
