@@ -1,42 +1,45 @@
-import React from 'react';
-import desktop from '../../Images/desktop.png';
-import laptop from '../../Images/laptop.png';
-
-import tablet from '../../Images/tablet.png';
+import React, { useEffect, useState } from 'react';
 import TestimonialItem from './TestimonialItem';
 
+//Fake Data
+// import desktop from '../../Images/desktop.png';
+// import laptop from '../../Images/laptop.png';
+// import tablet from '../../Images/tablet.png';
 
-const testimonialData = [
-  {
-    name: "Marin",
-    img: desktop,
-    description:
-      "Lorem ipsum dolor sit amet consectetur",
-  },
-  {
-    name: "Sanmartin",
-    img: laptop,
-    description:
-      "Lorem ipsum dolor sit amet consectetur",
-  },
-  {
-    name: "Final dot",
-    img: tablet,
-    description:
-      "Lorem ipsum dolor sit amet consectetur",
-  }
+
+
+// const testimonialData = [
+//   {
+//     name: "Marin",
+//     img: desktop,
+//     description:
+//       "Lorem ipsum dolor sit amet consectetur",
+//   },
+//   {
+//     name: "Sanmartin",
+//     img: laptop,
+//     description:
+//       "Lorem ipsum dolor sit amet consectetur",
+//   },
+//   {
+//     name: "Final dot",
+//     img: tablet,
+//     description:
+//       "Lorem ipsum dolor sit amet consectetur",
+//   }
   
-];
+// ];
+//Fake Data
 
 const Testimonials = () => {
-    // const [testimonialData, setTestimonialData] = useState([]);
+    const [testimonialData, setTestimonialData] = useState([]);
 
 
-    // useEffect(()=>{
-    //   fetch('https://lit-plateau-42557.herokuapp.com/review')
-    //   .then(res=>res.json())
-    //   .then(data=>setTestimonialData(data))
-    // }, [])
+    useEffect((testimonialData)=>{
+      fetch("http://localhost:5000/reviews")
+      .then(res=>res.json())
+      .then(data=>setTestimonialData(data))
+    }, [])
 
 
     return (

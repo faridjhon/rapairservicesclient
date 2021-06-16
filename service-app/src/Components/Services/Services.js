@@ -1,51 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import ServicesItem from './ServicesItem';
 
-import desktop from '../../Images/desktop.png';
-import laptop from '../../Images/laptop.png';
+// import desktop from '../../Images/desktop.png';
+// import laptop from '../../Images/laptop.png';
 
-import tablet from '../../Images/tablet.png';
-
-
+// import tablet from '../../Images/tablet.png';
 
 
-
-
-
-const servicesData =[
-    {
-        name: 'DESKTOP REPAIR',
-        img: desktop,
-        text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit." 
-    },
-    {
-        name: 'LAPTOP REPAIR',
-        img: laptop,
-        text:''
-    },
-    {
-        name: 'TABLET REPAIR',
-        img: tablet,
-        text:''
-    }
-]
-
-
-
-
+// const servicesData =[
+//     {
+//         name: 'DESKTOP REPAIR',
+//         img: desktop,
+//         text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit." 
+//     },
+//     {
+//         name: 'LAPTOP REPAIR',
+//         img: laptop,
+//         text:''
+//     },
+//     {
+//         name: 'TABLET REPAIR',
+//         img: tablet,
+//         text:''
+//     }
+// ]
 
 
 const Services = () => {
 
-//     const [servicesData,setServicesData] =useState([]);
+    const [servicesData,setServicesData] =useState([]);
 
-
-    // useEffect((servicesData) =>{
-    //     fetch()
-    //     .then(res => res.json())
-    //     .then(data => setServicesData(data))
-    //   }, []) 
-
+    useEffect((servicesData) =>{
+        fetch("http://localhost:5000/services")
+        .then(res => res.json())
+        .then(data => setServicesData(data))
+      }, []) 
 
 
 

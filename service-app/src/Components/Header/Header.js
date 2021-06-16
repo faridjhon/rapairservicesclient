@@ -3,7 +3,8 @@ import Blog from '../Blog/Blog';
 import Contactus from '../Contactus/Contactus';
 import Footer from '../Footer/Footer';
 import Login from '../Login/Login';
-import Navbar from '../Navbar/Navbar';
+import NavBar from '../Navbar/NavBar';
+
 import Ourteam from '../Ourteam/Ourteam';
 import Services from '../Services/Services';
 import Slider from '../Slider/Slider';
@@ -12,7 +13,7 @@ import Testimonials from '../Testimonial/Testimonials';
 const Header = () => {
     return (
         <div >
-           <Navbar></Navbar>
+           <NavBar></NavBar>
            <Slider></Slider> 
            <Blog></Blog>
            <Services></Services>
