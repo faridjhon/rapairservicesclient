@@ -22,7 +22,7 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar  d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "100vh" }}>
-            <h1>Slider</h1>
+            
             <ul className="list-unstyled ">
                 <li>
                     <Link to="/dashboard" className="text-white">
@@ -48,7 +48,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <Link to="/review" className="text-white">
-                            <FontAwesomeIcon icon={faFileAlt} /> <span>Review</span>
+                            <FontAwesomeIcon icon={faFileAlt} /> <span>Add Review</span>
                         </Link>
                     </li>
                     {/* {isAdmin && <div> */}

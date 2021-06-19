@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 import Sidebar from '../DashBoard/Sidebar';
 
-const AddService = () => {
+const AddReview = () => {
     const [info, setInfo] = useState({});
     
     const handleBlur = e => {
@@ -18,12 +18,12 @@ const AddService = () => {
     const handleSubmit = () => {
         const formData = new FormData()
         
-        formData.append('titlename', info.titlename);
-        formData.append('price', info.price);
+        formData.append('comments', info.comments);
         formData.append('name', info.name);
+        formData.append('designation', info.designation);
 
 
-        fetch('http://localhost:5000/AddService', {
+        fetch('http://localhost:5000/AddReview', {
             method: 'POST',
             body: formData
         })
@@ -40,19 +40,19 @@ const AddService = () => {
         <section className="container-fluid row">
             <Sidebar></Sidebar>
             <div className="col-md-10 p-4 pr-5 mt-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
-                <h5 className="text-brand">Add Services</h5>
+                <h5 className="text-brand">Add Review</h5>
                 <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                        <label htmlFor="exampleInputPassword1">Package Name</label>
-                        <input onBlur={handleBlur} type="text" className="form-control" name="titlename" placeholder="Package Name" />
+                        <label htmlFor="exampleInputPassword1">comments</label>
+                        <input onBlur={handleBlur} type="text" className="form-control" name="comments" placeholder="comments" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="exampleInputPassword1">Package Price</label>
-                        <input onBlur={handleBlur} type="text" className="form-control" name="price" placeholder="Package Price" />
+                        <label htmlFor="exampleInputPassword1">Customer Name</label>
+                        <input onBlur={handleBlur} type="text" className="form-control" name="name" placeholder="Customer Name" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="exampleInputPassword1">Diagnostic Type </label>
-                        <input onBlur={handleBlur} type="text" className="form-control" name="name" placeholder="Diagnostic Type" />
+                        <label htmlFor="exampleInputPassword1">Designation </label>
+                        <input onBlur={handleBlur} type="text" className="form-control" name="designation" placeholder="Designation" />
                     </div>
                     
                     <button type="submit" className="btn btn-primary">Submit</button>
@@ -62,4 +62,4 @@ const AddService = () => {
     );
 };
 
-export default AddService;
+export default AddReview;

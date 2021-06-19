@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 
 
@@ -8,28 +8,27 @@ const TestimonialItem = ({tt}) => {
         <div className="col-md-4">   
                 <Carousel>
                     <Carousel.Item interval={1000}>
-                    <img  src={tt.image} alt="" />
-                            <h5>{tt.comments}</h5>
+                           <h5>{tt.comments}</h5>
                             <br></br>
                             <h6>{tt.name}</h6>
                             <br></br>
-                            <p>{tt.desingnation}</p>
+                            <p>{tt.designation}</p>
                     
                     </Carousel.Item>
                     <Carousel.Item interval={500}>
-                    <h5>{tt.comments}</h5>
+                        <h5>{tt.comments}</h5>
                            <br></br>
                             <h6>{tt.name}</h6>
                             <br></br>
-                            <p>{tt.desingnation}</p>
+                            <p>{tt.designation}</p>
                     
                     </Carousel.Item>
                     <Carousel.Item>
-                    <h5>{tt.comments}</h5>
+                            <h5>{tt.comments}</h5>
                            <br></br>
                             <h6>{tt.name}</h6>
                             <br></br>
-                            <p>{tt.desingnation}</p>
+                            <p>{tt.designation}</p>
                     
                     </Carousel.Item>
                 </Carousel>

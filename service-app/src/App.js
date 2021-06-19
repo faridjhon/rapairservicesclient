@@ -20,12 +20,13 @@ import {
   useLocation
   
 } from "react-router-dom";
-import Review from "./Components/SideBarComponents/Review";
+import Review from "./Components/SideBarComponents/AddReview";
 import OrderList from "./Components/SideBarComponents/OrderList";
 import Booklist from "./Components/SideBarComponents/Booklist";
 import Book from "./Components/SideBarComponents/Book";
 import Admin from "./Components/SideBarComponents/Admin";
 import AddService from "./Components/SideBarComponents/AddService";
+// import Sidebar from "./Components/DashBoard/Sidebar";
 
 
 
@@ -50,12 +51,9 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/dashboard">
+            <PrivetRoute path="/dashboard">
               <Dashboard></Dashboard>
-            </Route>
-            {/* <PrivetRoute path="/dashboard">
-              <Dashboard></Dashboard>
-            </PrivetRoute> */}
+            </PrivetRoute>
             <Route path="/AddService">
               <AddService></AddService>
             </Route>
@@ -63,6 +61,9 @@ function App() {
               <Admin></Admin>
             </Route>
             <PrivetRoute path="/Book">
+              <Book></Book>
+            </PrivetRoute>
+            <PrivetRoute path="/Book/:id">
               <Book></Book>
             </PrivetRoute>
             <Route path="/BookList">
@@ -74,8 +75,7 @@ function App() {
             <Route path="/Review">
               <Review></Review>
             </Route>
-            
-            
+                         
           </Switch>
         </Router>
         </UserOrder.Provider>
